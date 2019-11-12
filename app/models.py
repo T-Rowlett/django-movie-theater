@@ -5,13 +5,15 @@ class Movie(models.Model):
     title = models.TextField()
     rating = models.TextField()
     genre = models.TextField()
-    runtime = models.TimeField()
+    runtime = models.TextField()
+
 
 class Showing(models.Model):
-    movie = models.ForeignKey(Movie, on_delete='PROTECT')
+    movie = models.ForeignKey(Movie, on_delete=models.PROTECT)
     showtime = models.TextField()
+
 
 class Ticket(models.Model):
     name = models.TextField()
-    purschase_at = models.TimeField()
-    showing = models.ForeignKey(Showing, on_delete="PROTECT")
+    purchased_at = models.DateTimeField()
+    showing = models.ForeignKey(Showing, on_delete=models.PROTECT)
