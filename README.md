@@ -20,7 +20,7 @@ To check your solution, I've provided a test suite that you can run with
 
 To gain a better idea of the application's goal, you can review the screenshots
 in the `/screenshots` directory.
-
+ 
 ## Models
 
 This application has 3 models: `Movie`, `Showing`, and `Ticket`.
